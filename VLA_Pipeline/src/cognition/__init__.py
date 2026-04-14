@@ -1,0 +1,2 @@
+"""Cognition adapters."""
+

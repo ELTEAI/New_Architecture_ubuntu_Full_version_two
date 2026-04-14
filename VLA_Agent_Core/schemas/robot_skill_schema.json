@@ -1,0 +1,42 @@
+{
+    "type": "function",
+    "function": {
+      "name": "execute_robot_tactical_sequence",
+      "description": "控制 VLA 机器狗执行一系列战术动作序列。必须根据自然语言指令的上下文，编排合理的动作顺序。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sequence_name": {
+            "type": "string",
+            "description": "为这套动作序列起一个英文代号，例如 'greet_and_play'"
+          },
+          "actions": {
+            "type": "array",
+            "description": "机器狗动作执行队列，按顺序执行。",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action_id": {
+                  "type": "integer",
+                  "enum": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                  "description": "严格对应的动作ID。Mode 1(连续运动, duration填0): 0:前进, 2:退后, 3:左横移, 4:右横移, 5:左转, 6:右转。Mode 2(阻塞动作, 需要2-5秒duration): 7:坐下, 8:起立, 9:伸懒腰, 10:打滚, 11:摆姿势, 12:拜年/作揖。Mode 0(紧急制动, duration填0): 1:完全静止。"
+                },
+                "duration": {
+                  "type": "number",
+                  "description": "动作持续或阻塞时间(秒)。Mode 1与Mode 0动作严格填0；Mode 2动作根据物理常识填入2到5之间的合理整数。"
+                }
+              },
+              "required": [
+                "action_id",
+                "duration"
+              ]
+            }
+          }
+        },
+        "required": [
+          "sequence_name",
+          "actions"
+        ]
+      }
+    }
+  }

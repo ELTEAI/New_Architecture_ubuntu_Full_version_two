@@ -1,0 +1,29 @@
+# ==========================================
+# VLA Agent Core - 具身智能体全局配置文件
+# ==========================================
+
+# 🎙️ 听觉感知层 (Layer 0: Whisper Audio to Text) 配置
+audio:
+  provider: "openai"
+  # 勿将真实 Key 写入仓库；运行时请 export OPENAI_API_KEY=... 并在代码中优先读环境变量
+  api_key: "YOUR_OPENAI_API_KEY_HERE"
+  model_name: "whisper-1"
+  language: "zh"
+
+# 🧠 抽象语义编译层 (Layer 3: LLM Task Planner) 配置
+# 对接本机 vLLM 的 OpenAI 兼容 API（与 LLM/agent_LLM/run_vllm_server.example.sh 一致）。
+# 使用 agent_planner 的 tools 时，vLLM 须带 --tool-call-parser（脚本默认 qwen3_coder，vLLM 0.19+ 无 qwen3）；修改后请重启 vLLM。
+llm:
+  provider: "openai_compatible"       # 客户端仍为 openai SDK，服务端为 vLLM
+  # vLLM 不校验 Key，但 SDK 需要非空字符串，常用占位：
+  api_key: "EMPTY"
+  base_url: "http://127.0.0.1:8000/v1"
+  # 必须与 vLLM 启动参数 --served-model-name 一致（默认 Qwen3.5-4B）
+  model_name: "Qwen3.5-4B"
+  # 工具调用建议偏低温度；可按需改为 0.0～0.3
+  temperature: 0.1
+
+# 🤖 底层执行与安全控制 (Layer 4: Hardware & FSM) 配置
+hardware:
+  fsm_tick_rate: 100
+  max_duration_limit: 10.0

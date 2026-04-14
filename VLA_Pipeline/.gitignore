@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual env
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Runtime outputs
+*.log
+
+# Large local resources
+models/
+unitree_Go2 SDK/
+
+# Editor files
+.vscode/
+.idea/

@@ -1,0 +1,20 @@
+# Core pipeline + VLA_Agent_Core planner dependencies
+pyyaml>=6.0
+openai>=1.0.0
+numpy>=1.24
+torch>=2.1
+
+# Perception stack (MediaPipe Tasks)
+opencv-python>=4.8
+mediapipe>=0.10,<0.11
+# mediapipe 0.10.x 与 protobuf 5/6 不兼容
+protobuf>=3.20,<4
+
+# Resource download helper
+huggingface_hub>=0.20.0
+
+# Go2 SDK Python bindings (optional at runtime but recommended)
+git+https://github.com/unitreerobotics/unitree_sdk2_python.git
+
+# Dev / tests
+pytest>=8.0
