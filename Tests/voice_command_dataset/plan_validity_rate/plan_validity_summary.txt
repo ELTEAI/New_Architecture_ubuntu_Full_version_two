@@ -1,0 +1,14 @@
+======== Plan Validity Summary ========
+Total input rows: 150
+Planner-tested rows: 90
+Valid plans: 90/90
+Plan validity rate: 100.00%
+
+===== By category =====
+category             n    valid%   mean_planning_s
+----------------------------------------------------------
+combo_action         30    100.00   0.772
+normal_action        60    100.00   0.511
+
+===== Invalid plan cases =====
+None

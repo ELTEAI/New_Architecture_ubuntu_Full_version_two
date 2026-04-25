@@ -1,0 +1,30 @@
+======== Emergency Routing Summary ========
+Total rows: 150
+Ground-truth emergency rows: 30
+Ground-truth non-emergency rows: 120
+
+Emergency detection accuracy (recall on emergency set): 96.67%  (29/30)
+Emergency false negative rate: 3.33%  (1/30)
+Emergency false positive rate: 0.00%  (0/120)
+Overall route correctness: 99.33%
+
+===== By category =====
+category             n    emergency_pred%   route_correct%
+--------------------------------------------------------------
+combo_action         30            0.00          100.00
+emergency            30           96.67           96.67
+invalid              30            0.00          100.00
+normal_action        60            0.00          100.00
+
+===== By voice (emergency ground-truth rows only) =====
+voice        n    tp% (detected as emergency)
+------------------------------------------
+alloy        10    100.0
+echo         10     90.0
+nova         10    100.0
+
+===== Emergency false negatives (missed emergency) =====
+- emergency_006 / echo: ASR='you' | REF='freeze'
+
+===== Emergency false positives (planner spurious to emergency) =====
+None

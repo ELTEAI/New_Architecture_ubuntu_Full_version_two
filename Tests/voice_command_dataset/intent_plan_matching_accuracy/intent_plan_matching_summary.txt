@@ -1,0 +1,20 @@
+======== Intent-Plan Matching Summary ========
+Total input rows: 150
+Intent-tested rows: 90
+Intent-plan matches: 88/90
+Intent-plan matching accuracy: 97.78%
+Schema-duration matches: 88/90
+Schema-duration accuracy: 97.78%
+
+===== By category =====
+category             n    match%   schema_dur%
+----------------------------------------------------------
+combo_action         30     96.67        96.67
+normal_action        60     98.33        98.33
+
+===== Intent mismatch cases: action sequence only =====
+- combo_006 / nova / combo_action: REF='turn right in place first and then perform a greeting bow' | ASR='Turn right in place first, and then perform a gridung bow.' | expected=[{'action': 'turn_right', 'duration': None}, {'action': 'greeting', 'duration': None}] | generated=[{'action': 'turn_right', 'duration': 0.0, 'action_id': 6}, {'action': 'pose', 'duration': 2.0, 'action_id': 11}] | reason=step[1] action mismatch: expected greeting, got pose
+- normal_003 / nova / normal_action: REF='move left' | ASR='Move.' | expected=[{'action': 'move_left', 'duration': None}] | generated=[{'action': 'move_forward', 'duration': 0.0, 'action_id': 0}] | reason=step[0] action mismatch: expected move_left, got move_forward
+
+===== Schema-duration mismatch cases among action-matched rows =====
+None

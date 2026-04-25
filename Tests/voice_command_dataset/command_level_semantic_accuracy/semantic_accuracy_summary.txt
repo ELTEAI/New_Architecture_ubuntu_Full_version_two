@@ -1,0 +1,24 @@
+======== Command-Level Semantic Accuracy Summary ========
+Total rows: 150
+Rows without ASR/API error: 150
+Semantic matches: 148/150
+Command-level semantic accuracy: 98.67%
+
+===== By category =====
+category             n    match%
+--------------------------------------
+combo_action         30    96.67
+emergency            30   100.00
+invalid              30   100.00
+normal_action        60    98.33
+
+===== By voice =====
+voice                n    match%
+--------------------------------------
+alloy                50   100.00
+echo                 50   100.00
+nova                 50    96.00
+
+===== Semantic mismatch cases =====
+- combo_006 / nova / combo_action: REF='turn right in place first and then perform a greeting bow' | ASR='Turn right in place first, and then perform a gridung bow.' | reason=The ASR transcript changes 'greeting bow' to 'gridung bow', which alters the intended action.
+- normal_003 / nova / normal_action: REF='move left' | ASR='Move.' | reason=The ASR transcript does not specify a direction, changing the intended command.

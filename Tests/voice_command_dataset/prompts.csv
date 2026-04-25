@@ -1,0 +1,51 @@
+id,category,text,language,expected_route,expected_valid,expected_intent,expected_steps
+normal_001,normal_action,walk forward,en,planner,true,move_forward,move_forward
+normal_002,normal_action,move backward,en,planner,true,move_backward,move_backward
+normal_003,normal_action,move left,en,planner,true,move_left,move_left
+normal_004,normal_action,move right,en,planner,true,move_right,move_right
+normal_005,normal_action,turn left,en,planner,true,turn_left,turn_left
+normal_006,normal_action,turn right,en,planner,true,turn_right,turn_right
+normal_007,normal_action,stand up,en,planner,true,stand_up,stand_up
+normal_008,normal_action,sit down,en,planner,true,sit_down,sit_down
+normal_009,normal_action,move forward slowly,en,planner,true,move_forward,move_forward
+normal_010,normal_action,move forward a short distance,en,planner,true,move_forward,move_forward
+normal_011,normal_action,move backward a short distance,en,planner,true,move_backward,move_backward
+normal_012,normal_action,rotate in place,en,planner,true,rotate,rotate
+normal_013,normal_action,stay still,en,planner,true,stop,stop
+normal_014,normal_action,recover to standing posture,en,planner,true,stand_up,stand_up
+normal_015,normal_action,perform a greeting bow,en,planner,true,greeting,greeting
+normal_016,normal_action,perform a roll over action,en,planner,true,roll_over,roll_over
+normal_017,normal_action,move forward at low speed,en,planner,true,move_forward,move_forward
+normal_018,normal_action,turn around in place,en,planner,true,turn_around,turn_around
+normal_019,normal_action,step to the left,en,planner,true,move_left,move_left
+normal_020,normal_action,step to the right,en,planner,true,move_right,move_right
+combo_001,combo_action,stand up first and then walk forward,en,planner,true,stand_up+move_forward,stand_up|move_forward
+combo_002,combo_action,walk forward and then stop,en,planner,true,move_forward+stop,move_forward|stop
+combo_003,combo_action,turn left first and then walk forward,en,planner,true,turn_left+move_forward,turn_left|move_forward
+combo_004,combo_action,move backward and then sit down,en,planner,true,move_backward+sit_down,move_backward|sit_down
+combo_005,combo_action,stand up move right and then stop,en,planner,true,stand_up+move_right+stop,stand_up|move_right|stop
+combo_006,combo_action,turn right in place first and then perform a greeting bow,en,planner,true,turn_right+greeting,turn_right|greeting
+combo_007,combo_action,walk forward a short distance and then turn left,en,planner,true,move_forward+turn_left,move_forward|turn_left
+combo_008,combo_action,recover to standing posture first and then move forward,en,planner,true,stand_up+move_forward,stand_up|move_forward
+combo_009,combo_action,move left and then move right,en,planner,true,move_left+move_right,move_left|move_right
+combo_010,combo_action,stop first and then sit down,en,planner,true,stop+sit_down,stop|sit_down
+emergency_001,emergency,stop,en,emergency,true,stop,stop
+emergency_002,emergency,halt,en,emergency,true,stop,stop
+emergency_003,emergency,stop immediately,en,emergency,true,stop,stop
+emergency_004,emergency,do not move,en,emergency,true,stop,stop
+emergency_005,emergency,emergency stop,en,emergency,true,stop,stop
+emergency_006,emergency,freeze,en,emergency,true,stop,stop
+emergency_007,emergency,stop moving now,en,emergency,true,stop,stop
+emergency_008,emergency,cancel all actions,en,emergency,true,stop,stop
+emergency_009,emergency,abort the current task,en,emergency,true,stop,stop
+emergency_010,emergency,shut down movement,en,emergency,true,stop,stop
+invalid_001,invalid,dance like a cat,en,planner,false,invalid,
+invalid_002,invalid,fly over the obstacle,en,planner,false,invalid,
+invalid_003,invalid,open the door,en,planner,false,invalid,
+invalid_004,invalid,pick up the bottle,en,planner,false,invalid,
+invalid_005,invalid,jump onto the table,en,planner,false,invalid,
+invalid_006,invalid,go to the kitchen,en,planner,false,invalid,
+invalid_007,invalid,follow that person,en,planner,false,invalid,
+invalid_008,invalid,do something cool,en,planner,false,ambiguous,
+invalid_009,invalid,move somehow,en,planner,false,ambiguous,
+invalid_010,invalid,make the right decision,en,planner,false,ambiguous,

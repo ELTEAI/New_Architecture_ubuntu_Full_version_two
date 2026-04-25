@@ -1,0 +1,30 @@
+======== Planning Latency Summary ========
+Source file: /home/ubuntu/New_Architecture/Tests/voice_command_dataset/plan_validity_rate/plan_validity_results.jsonl
+Planner-tested rows: 90
+
+--- Overall ---
+N: 90
+Mean planning latency: 0.5981 s
+Median planning latency: 0.5191 s
+P95 planning latency: 0.7619 s
+Min planning latency: 0.4681 s
+Max planning latency: 1.5705 s
+Std planning latency: 0.1607 s
+
+--- Category: combo_action ---
+N: 30
+Mean planning latency: 0.7716 s
+Median planning latency: 0.7427 s
+P95 planning latency: 0.9866 s
+Min planning latency: 0.5929 s
+Max planning latency: 1.5705 s
+Std planning latency: 0.1796 s
+
+--- Category: normal_action ---
+N: 60
+Mean planning latency: 0.5113 s
+Median planning latency: 0.5102 s
+P95 planning latency: 0.5277 s
+Min planning latency: 0.4681 s
+Max planning latency: 0.5354 s
+Std planning latency: 0.0123 s

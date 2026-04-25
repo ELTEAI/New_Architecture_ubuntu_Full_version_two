@@ -1,0 +1,18 @@
+# 仅忽略以下目录及其下所有文件（路径相对本仓库根目录）
+
+# Ollama 本地模型 blob 分块
+LLM/models/blobs/
+
+# 解压后的 episode 数据集
+data/
+
+# 本地 SSH 私钥目录（勿提交）
+SSH_key/
+
+# 本地环境变量（勿提交密钥）
+.env
+Tests/.env
+
+# Python 缓存
+**/__pycache__/
+*.py[cod]

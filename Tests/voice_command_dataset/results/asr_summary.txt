@@ -1,0 +1,33 @@
+
+======== ASR Summary ========
+Source file: D:\unitree_go2_vla_adapter_dataset\New_Architecture\Tests\voice_command_dataset\results\asr_results.jsonl
+Total rows: 150  |  API/path errors: 0  |  Transcribed (no error): 150
+
+--- All rows (WER=1 when API or path error) (n=150) ---
+  Near-match success rate (asr_success):  96.00%  (144/150)
+  Mean WER:                  0.0247
+  Mean latency:              0.986 s
+  Median latency:            0.844 s
+  P95 latency:               1.968 s
+  Latency sample stdev:      0.487 s
+
+----- Per sample_id (rows without API error) -----
+  Distinct sample_id count: 50
+  Samples with all recorded voices asr_success: 46 / 50  (92.0%)
+
+===== By category =====
+group                   n    ok%      mean_WER  mean_s   p95_s
+----------------------------------------------------------------
+combo_action            30   100.0     0.0030   1.079   2.121
+emergency               30    93.3     0.0639   0.965   2.036
+invalid                 30   100.0     0.0000   0.936   1.827
+normal_action           60    93.3     0.0283   0.976   1.913
+
+===== By voice =====
+group                   n    ok%      mean_WER  mean_s   p95_s
+----------------------------------------------------------------
+alloy                   50    98.0     0.0080   0.995   2.121
+echo                    50    96.0     0.0330   0.958   1.789
+nova                    50    94.0     0.0332   1.007   1.800
+
+[Done] Report written to: D:\unitree_go2_vla_adapter_dataset\New_Architecture\Tests\voice_command_dataset\results\asr_summary.txt
