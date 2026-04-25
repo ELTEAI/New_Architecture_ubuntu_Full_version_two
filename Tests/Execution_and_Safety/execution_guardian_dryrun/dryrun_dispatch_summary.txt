@@ -1,0 +1,30 @@
+======== Dry-run Command Dispatch Summary ========
+Schema file: /home/ubuntu/New_Architecture/VLA_Agent_Core/schemas/robot_skill_schema.json
+Total tasks: 65
+Schema-valid tasks: 65/65 (100.00%)
+Dispatch success: 65/65 (100.00%)
+
+Mean dispatch latency: 0.000002 s
+Median dispatch latency: 0.000002 s
+P95 dispatch latency: 0.000003 s
+Max dispatch latency: 0.000006 s
+
+===== By action_id =====
+action_id  action_name        n    success%   method
+------------------------------------------------------------------------
+0          move_forward       5     100.00   Move
+1          stop               5     100.00   StopMove
+2          move_backward      5     100.00   Move
+3          move_left          5     100.00   Move
+4          move_right         5     100.00   Move
+5          turn_left          5     100.00   Move
+6          turn_right         5     100.00   Move
+7          sit_down           5     100.00   StandDown
+8          stand_up           5     100.00   StandUp
+9          stretch            5     100.00   Stretch
+10         roll_over          5     100.00   RollOver
+11         pose               5     100.00   Pose
+12         greeting           5     100.00   Greeting
+
+===== Failure cases =====
+None

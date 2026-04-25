@@ -1,0 +1,33 @@
+======== Queue Preemption Correctness Summary ========
+Total preemption scenarios: 10
+Total emergency cycles: 12
+Initial queue admission correctness: 10/10 (100.00%)
+Pre-consumption simulation correctness: 10/10 (100.00%)
+Queue clear correctness: 10/10 (100.00%)
+Stop injection correctness: 10/10 (100.00%)
+Stop execution correctness: 10/10 (100.00%)
+Overall queue preemption correctness: 10/10 (100.00%)
+
+Mean queue clear latency: 0.000019 s
+P95 queue clear latency: 0.000036 s
+Mean stop injection latency: 0.000014 s
+P95 stop injection latency: 0.000021 s
+Mean stop execution latency: 0.000016 s
+P95 stop execution latency: 0.000024 s
+
+===== By scenario =====
+case_id                              state            maxQ  tasks  consumed  cycles  overall
+------------------------------------------------------------------------------------------------------
+preempt_short_mixed_standing         STANDING         20    3      0         1       True
+preempt_locomotion_long_queue        LOCOMOTION       20    8      0         1       True
+preempt_sitting_recovery_plan        SITTING          20    4      0         1       True
+preempt_blocking_state_pending_queue BLOCKING         20    4      0         1       True
+preempt_idle_bootstrap_plan          IDLE             20    4      0         1       True
+preempt_after_one_task_consumed      STANDING         20    4      1         1       True
+preempt_after_two_tasks_consumed     STANDING         20    5      2         1       True
+preempt_near_full_queue              STANDING         20    18     0         1       True
+preempt_small_capacity_queue         STANDING         3     5      0         1       True
+preempt_repeated_emergency           LOCOMOTION       20    3      0         3       True
+
+===== Failure cases =====
+None
